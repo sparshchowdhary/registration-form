@@ -89,7 +89,7 @@ function FormWrapper({ data, values, handleChange, ...props }) {
     coursedates.push(moment(validTimeStamps[i] * 1).format("DD/MM/YYYY"));
   }
   let newdates=[]; //remove duplicate dates from fetched valid timestamps
-  for(let i=0;i<coursedates.length;i++){
+  for(let i=0;i<coursedates.length;i++){//dates are not visible in dropdown as they are violating the given contraint, they were working till 15/09/2020
     if(newdates.indexOf(coursedates[i])===-1){
       newdates.push(coursedates[i]);
     }
